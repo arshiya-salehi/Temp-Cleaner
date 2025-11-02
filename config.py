@@ -55,7 +55,6 @@ def get_windows_folder_tmp() -> Path:
 
 # Mapping of display name -> callable that returns a Path for that target.
 TARGETS = {
-	"System Temp": get_system_temp,
 	"User %TEMP%": get_user_env_temp,
 	"Windows Temp": get_windows_folder_tmp,
 	"Prefetch": get_windows_prefetch,
