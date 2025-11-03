@@ -19,6 +19,7 @@ Files and responsibilities:
 - `cleaner.py` — core cleaning utilities. Exposes `clean_folder(Path)` which deletes contents of a folder and returns a summary dict, plus `clean_multiple()` convenience.
 - `main.py` — Tkinter GUI. Creates one button per target and a "Clean All Targets" button. Performs deletions on background threads and shows results.
 - `README.md` — docs and usage.
+- `cmd_tasks.py` — predefined Windows command tasks (e.g., `gpupdate /force`) and a `run_task()` helper. The GUI builds buttons for these commands.
 
 ## Usage
 
@@ -29,6 +30,8 @@ python main.py
 ```
 
 Click the button for the folder you want to clean (for example "User %TEMP%" or "Prefetch"). A confirmation dialog appears. The app attempts to delete all contents of the selected folder(s) and reports a summary.
+
+The GUI also includes a "CMD Tasks" section with buttons for common system commands (GP Update, flush DNS, etc.). Clicking a CMD button asks for confirmation, runs the command in the background, and shows the command output and return code in a popup window.
 
 Notes and safety
 
